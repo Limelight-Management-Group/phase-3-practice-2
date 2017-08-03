@@ -14,5 +14,10 @@
     "babel-preset-env": "^1.6.0",
     "chai": "^4.1.0",
     "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "pg-promise": "^6.3.6",
+    "postgresql": "0.0.1"
   }
 }

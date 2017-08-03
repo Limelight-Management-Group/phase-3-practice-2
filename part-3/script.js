@@ -4,11 +4,22 @@ let modalOpen = document.getElementById("cart-button")
 let modalClose = document.querySelector(".modal-close")
 let modalClearBtn = document.querySelector(".modal-clear")
 let addToCartBtn = document.querySelectorAll(".add-to-cart")
-console.log(addToCartBtn)
+let itemContainer = document.querySelectorAll("li > span")
+
 
 
 modalOpen.addEventListener("click", openModal);
 modalClose.addEventListener("click", closeModal);
+
+addToCartBtn.forEach( element => {
+  element.addEventListener("click", getItemData)
+})
+
+function getItemData(element) {
+  console.log(element.target.parentElement.childNodes[0].innerHTML)
+  console.log(element.target.parentElement.childNodes[1].innerHTML)
+}
+
 
 function openModal() {
   modal.classList.add("modal-open");
